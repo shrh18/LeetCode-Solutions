@@ -1,0 +1,20 @@
+class Solution:
+    def findDuplicate(self, nums: List[int]) -> int:
+        hare = nums[0]
+        tot = nums[0]
+
+        while True:
+            tot = nums[tot]
+            hare = nums[nums[hare]]
+
+            if nums[hare] == nums[tot]:
+                break
+
+        l = nums[0]
+        r = tot
+
+        while l!=r:
+            l = nums[l]
+            r = nums[r]
+
+        return l
