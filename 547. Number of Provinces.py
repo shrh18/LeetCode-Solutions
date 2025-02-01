@@ -15,7 +15,6 @@ class Solution:
             if rootU == rootV:
                 return False
             parent[rootV] = rootU
-            
             return True
 
         edges = []
